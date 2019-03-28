@@ -8,5 +8,5 @@
     mc:Ignorable="d"
     Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
-    <Grid Margin="750,0,0,0" Background="#FFFF00D3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    <Grid Margin="375,10,375,-10" Background="#FF29BBE6"/>
 </Page>
