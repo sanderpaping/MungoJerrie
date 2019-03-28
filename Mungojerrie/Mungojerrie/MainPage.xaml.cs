@@ -29,13 +29,14 @@ namespace Mungojerrie
             this.InitializeComponent();
             Bob bob = new Bob();
             bob.Name = "ITS YA BOI SKINNY WIENER";
-            this.T1.Text = bob.Name;
+            //this.T1.Text = bob.Name;
 
             Bob bob2 = new Bob();
             bob2.Name = "BANANA!!!!";
             this.C1.Content = bob2.Name;
             Api_Handler api = new Api_Handler();
             api.data();
+            this.T1.Text = api.app;
             // mainpage here  
 
         }
@@ -68,8 +69,8 @@ namespace Mungojerrie
     {
         public String url = "https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple";
         HttpClient client = new HttpClient();
+        public String app = "";
 
-        
 
         public Api_Handler()
         {
@@ -81,13 +82,25 @@ namespace Mungojerrie
         public async void data()
         {
             string response = await client.GetStringAsync(url);
-            var data = JsonConvert.DeserializeObject<List<JSONResponse>>(response);
-            foreach (JSONResponse q in data) {
-                Console.Write(q.result);
+            System.Diagnostics.Debug.WriteLine(response);
+            JSONResponse data = JsonConvert.DeserializeObject<JSONResponse>(response);
+            System.Diagnostics.Debug.WriteLine(data);
+            //////////////ggggggggggggggggaaaaat niet verder hier 
+            if (data.result != null)
+            {
+               
+                foreach (Results res in data.result)
+                {
+
+                    app += res.question;
+                }
+
+            }
+            else
+            {
+                app = "oh snap it didnt work";
             }
 
-
-            
         }
 
     }
@@ -105,10 +118,10 @@ namespace Mungojerrie
         public String difficulty { get; set; }
         public String question { get; set; }
         public String correct_answer { get; set; }
-        public WrongAnswer incorrect_answers { get; set; }
+        public WrongAnswers incorrect_answers { get; set; }
     }
 
-    public class WrongAnswer
+    public class WrongAnswers
     {
         public String zero { get; set; }
         public String one { get; set; }
