@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
-    <Grid Margin="375,10,375,-10" Background="#FF29BBE6">
+    <Grid x:Name="gridbox" Margin="375,0,375,0" Background="#FF29BBE6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <TextBox x:Name="T1" HorizontalAlignment="Left" Margin="346,302,0,0" Text="TextBox" VerticalAlignment="Top" Width="619" Height="155" FontSize="48"/>
-        <CheckBox x:Name="C1" HorizontalAlignment="Left" Margin="-156,527,0,0" VerticalAlignment="Top" Height="40" Width="150"/>
+        <CheckBox x:Name="C1" HorizontalAlignment="Left" Margin="346,536,0,0" VerticalAlignment="Top" Height="40" Width="150" Checked="checker" Unchecked="unchecker"/>
     </Grid>
 </Page>
