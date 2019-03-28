@@ -36,6 +36,16 @@ namespace Mungojerrie
             // mainpage here  
 
         }
+
+        private void checker(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void unchecker(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class Bob
