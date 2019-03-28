@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
+    Background="#FF06B0FF">
 
-    <Grid Margin="10,0,0,0" Background="#FFFF00D3"/>
+    <Grid Margin="69,71,78,62" Background="#FF6751F1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 </Page>
