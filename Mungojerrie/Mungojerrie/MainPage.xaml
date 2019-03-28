@@ -8,5 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
-    <Grid Margin="375,10,375,-10" Background="#FF29BBE6"/>
+    <Grid Margin="375,10,375,-10" Background="#FF29BBE6">
+        <Button Content="Start&#xD;&#xA;" HorizontalAlignment="Left" Margin="-251,482,0,0" VerticalAlignment="Top" Height="105" Width="191" Background="IndianRed" Click="Start_Click"/>
+    </Grid>
 </Page>
