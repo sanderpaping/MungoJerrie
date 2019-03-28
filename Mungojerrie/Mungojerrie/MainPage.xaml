@@ -6,9 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
-    <Grid>
-        <Button Background="Blue" Foreground="Red" Content="This is a button"/>
-    </Grid>
+    <Grid Margin="10,0,0,0"/>
 </Page>
