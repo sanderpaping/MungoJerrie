@@ -25,6 +25,10 @@ namespace Mungojerrie
         public MainPage()
         {
             this.InitializeComponent();
+
+            
+            // mainpage here  
+
         }
     }
 }

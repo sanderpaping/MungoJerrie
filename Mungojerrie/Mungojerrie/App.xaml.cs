@@ -20,6 +20,7 @@ namespace Mungojerrie
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
+    
     sealed partial class App : Application
     {
         /// <summary>
