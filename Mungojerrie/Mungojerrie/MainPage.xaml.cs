@@ -25,10 +25,25 @@ namespace Mungojerrie
         public MainPage()
         {
             this.InitializeComponent();
+            Bob bob = new Bob();
+            bob.Name = "ITS YA BOI SKINNY WIENER";
+            this.T1.Text = bob.Name;
 
-            
             // mainpage here  
 
         }
+    }
+
+    public class Bob
+    {
+        private String _name;
+        public Bob()
+        {
+            
+        }
+
+        public String Name { get; set; }
+
+        
     }
 }
