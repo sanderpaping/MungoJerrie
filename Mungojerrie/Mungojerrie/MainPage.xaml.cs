@@ -29,6 +29,10 @@ namespace Mungojerrie
             bob.Name = "ITS YA BOI SKINNY WIENER";
             this.T1.Text = bob.Name;
 
+            Bob bob2 = new Bob();
+            bob2.Name = "BANANA!!!!";
+            this.C1.Content = bob2.Name;
+
             // mainpage here  
 
         }
