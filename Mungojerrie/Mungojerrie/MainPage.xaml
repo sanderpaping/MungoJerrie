@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Button Background="Blue" Foreground="Red" Content="This is a button"/>
     </Grid>
 </Page>
