@@ -9,6 +9,6 @@
     Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
     <Grid Margin="375,10,375,-10" Background="#FF29BBE6">
-        <Button Content="Start&#xD;&#xA;" HorizontalAlignment="Left" Margin="-251,482,0,0" VerticalAlignment="Top" Height="105" Width="191" Background="IndianRed" Click="Start_Click"/>
+        <TextBox x:Name="T1" HorizontalAlignment="Left" Margin="346,302,0,0" Text="TextBox" VerticalAlignment="Top" Width="619" Height="155" FontSize="48"/>
     </Grid>
 </Page>
