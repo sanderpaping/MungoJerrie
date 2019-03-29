@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,16 +28,15 @@ namespace Mungojerrie
         public MainPage()
         {
             this.InitializeComponent();
-            Bob bob = new Bob();
-            bob.Name = "ITS YA BOI SKINNY WIENER";
-            //this.T1.Text = bob.Name;
+            
 
             Bob bob2 = new Bob();
             bob2.Name = "BANANA!!!!";
             this.C1.Content = bob2.Name;
             Api_Handler api = new Api_Handler();
             api.data();
-            this.T1.Text = api.app;
+            //this.T1.Text = api.root.results[0].question;
+
             // mainpage here  
 
         }
@@ -69,64 +69,36 @@ namespace Mungojerrie
     {
         public String url = "https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple";
         HttpClient client = new HttpClient();
-        public String app = "";
-
-
-        public Api_Handler()
-        {
-
-        }
-
+        public RootObject root;
         
-
         public async void data()
         {
-            string response = await client.GetStringAsync(url);
-            System.Diagnostics.Debug.WriteLine(response);
-            JSONResponse data = JsonConvert.DeserializeObject<JSONResponse>(response);
-            System.Diagnostics.Debug.WriteLine(data);
-            //////////////ggggggggggggggggaaaaat niet verder hier 
-            if (data.result != null)
-            {
-               
-                foreach (Results res in data.result)
-                {
-
-                    app += res.question;
-                }
-
-            }
-            else
-            {
-                app = "oh snap it didnt work";
-            }
-
+            String response = await client.GetStringAsync(url);
+            var data = JsonConvert.DeserializeObject<RootObject>(response);
+            root = data;
         }
 
     }
 
-    public class JSONResponse
+    public class RootObject
     {
         public int response_code { get; set; }
-        public List<Results> result { get; set; }
+        public List<Result> results { get; set; }
     }
 
-    public class Results
+    public class Result
     {
-        public String category { get; set; }
-        public String type { get; set; }
-        public String difficulty { get; set; }
-        public String question { get; set; }
-        public String correct_answer { get; set; }
-        public WrongAnswers incorrect_answers { get; set; }
+        public string category { get; set; }
+        public string type { get; set; }
+        public string difficulty { get; set; }
+        public string question { get; set; }
+        public string correct_answer { get; set; }
+        public List<string> incorrect_answers { get; set; }
     }
 
-    public class WrongAnswers
-    {
-        public String zero { get; set; }
-        public String one { get; set; }
-        public String two { get; set; }
-    }
+    
+
+
 
 
 }
