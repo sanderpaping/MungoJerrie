@@ -9,7 +9,10 @@
     Background="{ThemeResource InkToolbarAccentColorThemeBrush}">
 
     <Grid x:Name="gridbox" Margin="375,0,375,0" Background="#FF29BBE6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TextBox x:Name="T1" HorizontalAlignment="Left" Margin="346,302,0,0" Text="TextBox" VerticalAlignment="Top" Width="619" Height="155" FontSize="48"/>
-        <CheckBox x:Name="C1" HorizontalAlignment="Left" Margin="346,536,0,0" VerticalAlignment="Top" Height="40" Width="150" Checked="checker" Unchecked="unchecker"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,106,0,0" Text="MUNGOJERRIE" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.403,0.259" Height="103" FontSize="72" Width="500" TextAlignment="Center"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="30,253,0,0" VerticalAlignment="Top" Height="123" Width="232"/>
+        <Button Content="Button" HorizontalAlignment="Right" Margin="0,253,29,0" VerticalAlignment="Top" Height="125" Width="236"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,448,0,0" VerticalAlignment="Top" Height="125" Width="234"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,616,0,0" VerticalAlignment="Top" Height="125" Width="234"/>
     </Grid>
 </Page>

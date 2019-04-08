@@ -13,44 +13,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Mungojerrie
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CategoryScreen : Page
     {
-        public MainPage()
+        public CategoryScreen()
         {
             this.InitializeComponent();
-
-            // mainpage here  
-
         }
-
-        private void checker(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void unchecker(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
-
-    public class Bob
-    {
-        private String _name;
-        public Bob()
-        {
-            
-        }
-
-        public String Name { get; set; }
-
-        
     }
 }
